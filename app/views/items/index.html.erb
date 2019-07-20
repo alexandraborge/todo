@@ -1,3 +1,9 @@
-<% @all_items.each do |item| %>
-  <%= item[:title] %>
+<% @days.each do |day| %>
+  <h3><%= day[:description] %></h3>
+  <% items_by_day = @all_items.select { |item| item[:day] == day[:id] } %>
+  <ul>
+    <% items_by_day.each do |item| %>
+      <li><%= item[:title] %></li>
+    <% end %>
+  </ul>
 <% end %>

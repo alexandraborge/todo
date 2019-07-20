@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Day.create([{description: 'Monday'}, {description: 'Tuesday'}, {description: 'Wednesday'}, {description: 'Thursday'}, {description: 'Friday'}, {description: 'Saturday'}, {description: 'Sunday'}])

@@ -1,1 +1,9 @@
-hi we will add new items here
+<h1>Add a New List Item for <%= @day %></h1>
+<form action="/create" method='post'>
+  <label for="title">Title: </label>
+  <input type="text" name='title'>
+  <label for="description">Description: </label>
+  <input type="text" name='description'>
+  <input type="hidden" name='day' value="<%= @day_id %>">
+  <input type='submit'>
+</form>

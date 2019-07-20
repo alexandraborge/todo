@@ -1,2 +1,2 @@
-module ItemsHelper < ApplicationHelper
+module ItemsHelper
 end

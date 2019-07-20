@@ -1,0 +1,2 @@
+module ItemsHelper < ApplicationHelper
+end

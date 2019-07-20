@@ -4,4 +4,7 @@ class ItemsController < ApplicationController
     @all_items = Item.all
     @days = Day.all
   end
+
+  def new
+  end
 end

@@ -6,4 +6,5 @@
       <li><%= item[:title] %></li>
     <% end %>
   </ul>
+    <button><%= link_to('New List Item', new_item_path(day[:description])) %></button>
 <% end %>

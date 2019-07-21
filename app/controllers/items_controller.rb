@@ -19,4 +19,7 @@ class ItemsController < ApplicationController
 
     redirect_to('/')
   end
+
+  def edit
+  end
 end

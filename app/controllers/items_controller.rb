@@ -21,5 +21,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @item_title = Item.all.find { |item| item[:id] == params[:id].to_i }[:title]
   end
 end

@@ -3,7 +3,7 @@
   <% items_by_day = @all_items.select { |item| item[:day] == day[:id] } %>
   <ul>
     <% items_by_day.each do |item| %>
-      <li><%= item[:title] %></li>
+      <li><%= item[:title] %> <button><%= link_to('Edit', edit_item_path(item[:id])) %></button></li>
     <% end %>
   </ul>
     <button><%= link_to('New List Item', new_item_path(day[:description])) %></button>

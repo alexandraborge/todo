@@ -11,9 +11,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-    title = params['title']
-    description = params['description']
-    day = params['day']
+    title = params[:title]
+    description = params[:description]
+    day = params[:day]
 
     Item.create(title: title, description: description, day: day)
 
@@ -21,20 +21,12 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item_id = params[:id]
-    @item = Item.find_by(id: @item_id)
-    @item_title = @item[:title]
-    @item_description = @item[:description]
+    @item = Item.find_by(id: params[:id])
   end
 
   def update
-    title = params[:title]
-    description = params[:description]
-    previous_title = params[:previous_title]
-    previous_description = params[:previous_description]
-
-    new_title = title.blank? ? previous_title : title
-    new_description = description.blank? ? previous_description : description
+    new_title = params[:title]
+    new_description = params[:description]
 
     item = Item.find_by(id: params[:id])
     item.update(title: new_title)

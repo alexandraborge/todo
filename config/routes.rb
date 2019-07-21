@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   post '/create', to: 'items#create'
   get '/edit_item/:id', to: 'items#edit', as: 'edit_item'
   post '/update', to: 'items#update'
+  delete 'delete/:id', to: 'items#delete', as: 'delete_item'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
